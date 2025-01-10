@@ -117,13 +117,15 @@ The mandatory attributes are: src, song-name, artist-album and cover-img.<br>
 The optional properties are: autoplay, type and loop.<br>
 The component is based on an audio tag, it is actually a customization of it and it uses an audio tag underneath to work, so some of these attributes are the same of the audio tag.
 
-* 'src': Specifies the URL of the audio file.
-* 'song-name': Specifies the name of the song to show on the player, it must be a text value.
-* 'artist-album': Specifies the artist and the album to show on the player, it must be a text value, the artist and the album should separated by a spaced hyphen ' - ', or you can omit the album and the hyphen if you want and set only the artist.
-* 'cover-img': Specifies the URL of the image that would be used as the background image of the player, it could be an album cover, an image of an artist or an image you want, it is recommended to be an image related to the song or audio you use.
-* 'autoplay': Specifies that the audio will start playing as soon as it is ready. It is a boolean value, if it is present with any value, even with false, it will be taken as true, so only include this attribute when you want its functionality.
-* 'type': Specifies the MIME-type of the resource.
-* 'loop': Specifies that the audio will start over again, every time it is finished. It is a boolean value, if it is present with any value, even with false, it will be taken as true, so only include this attribute when you want its functionality.
+| Attribute           | Description                                                  |
+| --------------------| ------------------------------------------------------------ |
+| src                 | Specifies the URL of the audio file.                         |
+| song-name           | Specifies the name of the song to show on the player, it must be a text value. |
+| artist-album        | Specifies the artist and the album to show on the player, it must be a text value, the artist and the album should separated by a spaced hyphen ' - ', or you can omit the album and the hyphen if you want and set only the artist. |
+| cover-img           | Specifies the URL of the image that would be used as the background image of the player, it could be an album cover, an image of an artist or an image you want, it is recommended to be an image related to the song or audio you use. |
+| autoplay            | Specifies that the audio will start playing as soon as it is ready. It is a boolean value, if it is present with any value, even with false, it will be taken as true, so only include this attribute when you want its functionality. |
+| type                | Specifies the MIME-type of the resource. |
+| loop                | Specifies that the audio will start over again, every time it is finished. It is a boolean value, if it is present with any value, even with false, it will be taken as true, so only include this attribute when you want its functionality. |
 
 It is maybe possible to set other audio tag attributes, but is strongly recommended to use only these seven attributes that are the officialy supported.
 
