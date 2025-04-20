@@ -1,12 +1,20 @@
 # ClarkCodesMusicPlayer Web Components
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/ee5e4e61-4bb3-49d6-8611-44bfcb2f13d0" height="250" />
+  
 </p>
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/ee5e4e61-4bb3-49d6-8611-44bfcb2f13d0" height="250" />
+
+[![Static Badge](https://img.shields.io/badge/Version-v1.1-orange)](https://github.com/clarkcodes/ClarkCodesMusicPlayer-WebComponents/releases)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://github.com/clarkcodes/ClarkCodesMusicPlayer-WebComponents/blob/main/LICENSE)
+
+  ### **✨ Fully custom, elegant Music and Audio Players Web Components. Listen what you want with style. ✨**
+</div>
 
 Welcome, thank you for visiting this repository, here you will find the web components in ClarkCodesMusicPlayer, for now there is only one, but it is planned in the future it would be two at least, the one it is here now is ClarkCodesAudioPlayer, but on next it is planned that also be here the ClarkCodesMusicPlayer itself, the difference between these two is explained by their names, one is an audio player and the another one is a music player, the audio player is meant to play only 1 song or audio with limited functionalities, while the music player is meant to be a full music player with extended functionalities, this second one is actually based on the first one, like a natural evolution and extension of it.
 
 ## ClarkCodesAudioPlayer
-This is a fully customized audio player web component, an open source project made by me from scratch as part of my personal learning process, so I wanted to share it, for everyone to be able to see how it is made, to read the code or to just use it if you need something like this for your web.
+This is an html audio tag wrapper made as a fully custom audio player web component, with a much greater look and feel, an open source project made by me from scratch as part of my personal learning process, so I wanted to share it, for everyone to be able to see how it is made, to read the code or to just use it if you need something like this for your web.
 
 ## Technologies used
 <p align="center" gap="7vw">
@@ -21,10 +29,15 @@ This is a fully customized audio player web component, an open source project ma
   <a href="https://www.w3schools.com/js/default.asp/"><img src="https://img.shields.io/badge/Javascript--F7DF1E.svg?longCache=true&style=plastic&logo=JavaScript&color=F7DF1E" alt="JavaScript shield image"></a>
 </p>
 
-I only used HTML, CSS and Javascript Vanilla, with no frameworks at all, maximizing compatibility, you can use it practically in any web development project.
+I only used HTML, CSS and Javascript Vanilla, with no frameworks at all, using html DOM custom elements, maximizing compatibility, you can use it practically in any web development project.
+
+## State
+The project currently is on the version **```v1.1```**, this last version brings many improvements, fixes and updates that makes it incredibly better, solves problems it had before, so much easier to use.
+
+If you want to know the details about what has change in this version, check the changelog corresponding to this version in the [releases section](https://github.com/clarkcodes/ClarkCodesMusicPlayer-WebComponents/releases).
 
 ## How to use it
-Ok, you can use this web component easily, let's only review a few steps to get you done with it, for it, check these steps are met in your project:
+Ok, you can use this web component really easy, let's only review a few basic steps to get you done with it, check these steps are met in your project:
 
 ### 1. Preparation<br>
 Download and Copy the ClarkCodesMusicPlayer folder to your web project components folder, or to the folder you want to store the component in.
@@ -32,15 +45,20 @@ Download and Copy the ClarkCodesMusicPlayer folder to your web project component
 For example, it would look something like this:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/82690af6-e605-48a1-9d29-c8f456d56585" width="250" />
+  <img src="https://github.com/user-attachments/assets/477d6546-d47e-4158-a118-11b05c4df034" width="250" />
 </p>
 
 ### 2. Importing the component<br>
-In the html code of the page you want to use the component in, inside a script block or in a javascript file used in the page, do an import of the ClarkCodesAudioPlayer component, but do it at the end of the body or when the DOM has already loaded.
+In the html code of the page where you want to use the component, place a script tag at the end of the body when the DOM has practically already loaded. 
+Set the script tag attribute "type" to 'module', inside just do an import of the component javascript file: ClarkCodesAudioPlayer.js.
+
+And that is it, this is all you need to do to use it, you only need to import it where you want to use it and nothing more, this fantastic!, it automatically manages its visual style, fonts and anything it needs to work properly, easy and practical.
 
    For example, it would be something like this:
 
    ``` HTML
+<html>
+...
    <body>
         <header>...</header>
         ...
@@ -49,44 +67,22 @@ In the html code of the page you want to use the component in, inside a script b
         </main>
         <footer>...</footer>
         <script type="module">
-            import {ClarkCodesAudioPlayer} from '../common/components/ClarkCodesMusicPlayer/ClarkCodesAudioPlayer/ClarkCodesAudioPlayer.js';
-            window.customElements.define( 'clark-codes-audio-player', ClarkCodesAudioPlayer );
+            import '../common/components/ClarkCodesMusicPlayer/ClarkCodesAudioPlayer/ClarkCodesAudioPlayer.js';
         </script>
    </body>
+</html>
    ```
    
-### 3. Taking care of the visual aspect<br>
-The component uses the Poppins font to show text in it, two weights of it, normal and bold, if you already use this font in your project then you can skip this step, but if not, you will need to make an import of the css styles file that would declare these fonts in your page, it is a very lightweight file only declaring these two weights of the font, do this inside the head tag of your page using a style tag. All the resources the component needs to work properly are in the 'common' directory of the component folder, including this css styles file, you only need to point to it. It is not recommendable to make changes in the component's folder files unless you know what you are doing and you can match it inside the component's javascript file.
+### 3. Use the component wherever you want<br>
+In any page you want, you can use different instances of it, every tag of the component represents an instance of it.
+The component works with a custom tag, by default this tag is ```<cc-audio-player />```, this is a self-closing tag, so you only need the opening tag, you can change this tag name if you want by changing the corresponding parameter at the end of the component javascript file, but if you do it, remember you will have to use the tag with the name you set. 
 
-   For example, it would be something like this:
-   
-   ``` HTML
-   <!DOCTYPE html>
-   <html lang="es">
-        <head>
-             <meta charset="UTF-8">
-             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-             <title>Your Page Title</title>
-             <style>@import url( "../common/components/ClarkCodesMusicPlayer/common/fonts/fontStyle.css" );</style>
-        </head>
-        <body>
-             ...
-             <script type="module">
-                  import {ClarkCodesAudioPlayer} from '../common/components/ClarkCodesMusicPlayer/ClarkCodesAudioPlayer/ClarkCodesAudioPlayer.js';
-                  window.customElements.define( 'clark-codes-audio-player', ClarkCodesAudioPlayer );
-             </script>
-        </body>
-   </html>
-   ```
-   
-### 4. Use the component wherever you want<br>
-In any page you want, you can use different instances of it, every tags pair represents an instance, previously, when importing the component, it was declared with a custom tag using the method 'window.customElements.define()', this method requires two parameters, the first one is the custom tag name we want to use and the second one, the class of the web component that was imported in the previous line, in this example the resulting tag is '<clark-codes-audio-player></clark-codes-audio-player>', you can change this tag name as you want changing the parameter name when calling this method, but remember you have to use the tag with the name you set in it. 
+> [!IMPORTANT]
+> All the resources the component needs to work properly are in the 'assets' directory of the component folder. It is not recommendable to make changes in the component folder files unless you know what you are doing and only if you are sure you can match any change and resolve any inconsistence inside the component javascript file.
+Also remember to verify the path you are using to make the import must match with your project structure, the path in the example is based on the project file tree shown before, but you verify your path with your own project structure file tree, it must point to the component javascript file, change and adjust that path if needed in order to set it properly.
 
-Also remember to verify the paths you are using to make the imports, these must match with your project structure, the paths in the examples are based on the project file tree shown before, but you verify the paths with your own project structure file tree, change them and adjust them if needed to set them properly.
-
-Then, use this tag where you want show the audio player in your page, put it as it suits you.
-
-   For example, it would look like this:
+Then, use this tag where you want to show the audio player in your page, put it as it suits you.
+   For example, it would look something like this:
 ``` HTML
    <!DOCTYPE html>
    <html lang="es">
@@ -94,45 +90,58 @@ Then, use this tag where you want show the audio player in your page, put it as 
              <meta charset="UTF-8">
              <meta name="viewport" content="width=device-width, initial-scale=1.0">
              <title>Your Page Title</title>
-             <style>@import url( "../common/components/ClarkCodesMusicPlayer/common/fonts/fontStyle.css" );</style>
+             ... 
         </head>
         <body>
              ...
              <section id="audioPlayerSectionId">
-                  <clark-codes-audio-player src="../common/audios/Love Thing.mp3" type="audio/mpeg" autoplay="true" song-name="Love Thing" artist-album="Joe Satriani - Crystal Planet" cover-img="../common/images/Satriani-BCN-2023-1.jpg" ></clark-codes-audio-player>
+                  <cc-audio-player src="../common/audios/Love Thing.mp3" type="audio/mpeg" autoplay="true" song-name="Love Thing" artist="Joe Satriani" album="Crystal Planet" cover-img="../common/images/Satriani-BCN-2023-1.jpg" />
              </section>
              ...
              <script type="module">
-                  import {ClarkCodesAudioPlayer} from '../common/components/ClarkCodesMusicPlayer/ClarkCodesAudioPlayer/ClarkCodesAudioPlayer.js';
-                  window.customElements.define( 'clark-codes-audio-player', ClarkCodesAudioPlayer );
+                  import '../common/components/ClarkCodesMusicPlayer/ClarkCodesAudioPlayer/ClarkCodesAudioPlayer.js';
              </script>
         </body>
    </html>
    ```
-Be careful about not changing the internal files location of the component folder, if you do it then some functionalities would break and will not work properly, then you would have to adjust those paths in the internal code of the component, it could take little while to understand the component code, but it is not so long, sure you can do it, althought if you don't really have to do it then it is recommended to keep the structure inside the component folder as is.
+This use of the component would render like this:
 
-### 5. Finally, know the component tag structure<br>
-The component uses 7 possible attributes, some of them are mandatory to work properly and some of them are optional.<br>
-The mandatory attributes are: src, song-name, artist-album and cover-img.<br>
-The optional properties are: autoplay, type and loop.<br>
-The component is based on an audio tag, it is actually a customization of it and it uses an audio tag underneath to work, so some of these attributes are the same of the audio tag.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/45adb0d1-d932-482b-ae31-ca2acec846c6" height="250" />
+</p>
+
+## Finally, know the component tag structure<br>
+The component uses 8 possible attributes, some of them are mandatory to work properly and some of them are optional.<br>
+The mandatory and/or highly recommended attributes are: src, song-name, artist and cover-img.<br>
+The optional properties are: album, autoplay, type and loop.<br>
+Actually the song-name, artist, album and cover-img are not strictly needed and mandatory, the component could still work without these attributes, but it would be really weird to have a player without a song name, without artist or cover image, nevertheless, there are fallback elements to supply these attributes in the case they were not specified, but it is highly recommended to provide them.
+
+> [!NOTE]
+> The only real mandatory attribute is src, in order for the audio to play, without it, no sound or audio would be played and the component would make no sense.
+
+The component is based on the html audio tag, it is actually a customization wrapper of it and uses an actual audio tag underneath to work, so some of these attributes are the same of the audio tag.
+
+You can see the attributes with their description as follows:
 
 | Attribute           | Description                                                  |
 | --------------------| ------------------------------------------------------------ |
 | src                 | Specifies the URL of the audio file.                         |
 | song-name           | Specifies the name of the song to show on the player, it must be a text value. |
-| artist-album        | Specifies the artist and the album to show on the player, it must be a text value, the artist and the album should separated by a spaced hyphen ' - ', or you can omit the album and the hyphen if you want and set only the artist. |
-| cover-img           | Specifies the URL of the image that would be used as the background image of the player, it could be an album cover, an image of an artist or an image you want, it is recommended to be an image related to the song or audio you use. |
+| artist              | Specifies the artist to show on the player, it must be a text value. |
+| album               | Specifies the album to show on the player, it must be a text value, it is optional, you can omit it. |
+| cover-img           | Specifies the URL of the image that would be used as the background image of the player, a text value with a relative path to the audio file in the project, it could be an album cover, an image of an artist or any image you want to use, it is recommended to be an image related to the song or audio you use. |
 | autoplay            | Specifies that the audio will start playing as soon as it is ready. It is a boolean value, if it is present with any value, even with false, it will be taken as true, so only include this attribute when you want its functionality. |
 | type                | Specifies the MIME-type of the resource. |
 | loop                | Specifies that the audio will start over again, every time it is finished. It is a boolean value, if it is present with any value, even with false, it will be taken as true, so only include this attribute when you want its functionality. |
 
-It is maybe possible to set other audio tag attributes, but is strongly recommended to use only these seven attributes that are the officialy supported.
+> [!TIP]
+> It is maybe possible to set other audio tag attributes, but is strongly recommended to use only these eight attributes that are the officialy supported.
 
-If you don't specify a 'cover-img' attibute and you completely omit it, then a default image is set, but it is recommended you set a custom image.
+> [!IMPORTANT]
+> If you don't specify a 'cover-img' attibute and you completely omit it, then a fallback image is set, but it is recommended you set a custom image. Also verify that the specified path is valid, if the path does not point to an image file, the fallback image cannot take place because a path has been provided but given it is not valid, no image will be shown, showing only a plain color, and this probably is not the desired behavior, so make sure the path you provide is correct and a valid one.
 
 ## You are all set
-This is it, if you checked these 5 steps then you should have the component working properly, enjoy it!.<br><br>
+This is it, if you checked these 3 steps and know what these attributes represent, then you should have the component working properly, enjoy it!.<br><br>
 
 ## ![ClarkCodes Logo OnTransparent_100x100px_300ppi](https://user-images.githubusercontent.com/39943822/235443512-3ab382e8-888e-4d2d-87ba-1c8f4ef3ec45.png) Hey what's up man!, I'm Clark.
 [![Twitter Follow](https://img.shields.io/twitter/follow/ClarkCodes?style=social)](https://twitter.com/clarkcodes)
@@ -157,4 +166,6 @@ Thank you very much for visiting and checking this project, I loved doing it, it
 
 Happy Coding! <3 
 
-`Clark`.
+``` Python 
+Clark.
+```
