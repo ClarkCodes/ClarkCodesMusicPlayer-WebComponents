@@ -18,12 +18,14 @@ This is an html audio tag wrapper made as a fully custom audio player web compon
 
 ## Technologies used
 <p align="center" gap="7vw">
-  <img alt="HTML5 Logo" height="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" gap="7vw">
-  <img alt="CSS Logo" height="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" gap="7vw">
-  <img alt="Javascript Logo" height="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" gap="7vw">
+  <a href="https://www.webcomponents.org/"><img alt="WebComponents Logo" height="50" src="https://github.com/user-attachments/assets/f49a1c38-2241-43ce-b200-6776da0deb4e" gap="7vw"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://dev.w3.org/html5/spec-LC/"><img alt="HTML5 Logo" height="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" gap="7vw"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.w3schools.com/css/"><img alt="CSS Logo" height="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" gap="7vw"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.w3schools.com/js/default.asp/"><img alt="Javascript Logo" height="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" gap="7vw"></a>
 </p>
 
 <p align="center">
+  <a href="https://www.webcomponents.org/"><img src="https://img.shields.io/badge/WebComponents--29ABE2.svg?longCache=true&style=plastic&logo=webcomponentsdotorg&color=29ABE2" alt="WebComponents shield image"></a>
   <a href="https://dev.w3.org/html5/spec-LC/"><img src="https://img.shields.io/badge/HTML-5-E34F26.svg?longCache=true&style=plastic&logo=html5&color=E34F26" alt="HTML5 shield image"></a>
   <a href="https://www.w3schools.com/css/"><img src="https://img.shields.io/badge/CSS-3-1572B6.svg?longCache=true&style=plastic&logo=css3&color=1572B6" alt="CSS shield image"></a>
   <a href="https://www.w3schools.com/js/default.asp/"><img src="https://img.shields.io/badge/Javascript--F7DF1E.svg?longCache=true&style=plastic&logo=JavaScript&color=F7DF1E" alt="JavaScript shield image"></a>
